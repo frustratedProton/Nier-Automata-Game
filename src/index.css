@@ -1,0 +1,160 @@
+@import url('./yorha.css');
+
+@font-face {
+  font-family: 'RodinProDB';
+  src: local('RodinProDB') url(./assets/RodinProDB.otf) format('opentype');
+}
+
+body {
+  font-family: 'RodinProDB';
+  font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+p {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.header-text {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-text--primary {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+
+.header-text-secondary {
+  font-size: 2rem;
+}
+
+.logo {
+  width: 100rem;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.score-text,
+.charName {
+  background-color: #dcd8c0;
+  padding: 1rem 0.89rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.cards {
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: repeat(6, 190px);
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* card element */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  background-color: #454138;
+  border: 6px solid #dcd8c0;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.img-container {
+  height: 250px;
+}
+
+.img-container img {
+  max-width: 100%;
+}
+
+dialog {
+  z-index: 1;
+  position: absolute;
+  margin: 0 auto;
+  background-color: #454138;
+  border-radius: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.msg {
+  width: 48rem;
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  color: #dcd8c0;
+  padding: 3rem;
+}
+
+.msg-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: left;
+}
+
+.msg--primary {
+  font-size: 5.8rem;
+}
+
+.msg--secondary {
+  font-size: 1.8rem;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+  padding: 10px;
+  width: fit-content;
+  font-weight: bold;
+}
